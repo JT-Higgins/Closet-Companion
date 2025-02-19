@@ -29,20 +29,23 @@
 		963A8E322D654930008F7DDD /* Closet CompanionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Closet CompanionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		963A8E872D65524D008F7DDD /* Exceptions for "Closet Companion" folder in "Closet Companion" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ViewModels/WeatherViewModel.swift,
+			);
+			target = 963A8E172D65492B008F7DDD /* Closet Companion */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		963A8E1A2D65492B008F7DDD /* Closet Companion */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				963A8E872D65524D008F7DDD /* Exceptions for "Closet Companion" folder in "Closet Companion" target */,
+			);
 			path = "Closet Companion";
-			sourceTree = "<group>";
-		};
-		963A8E2B2D65492F008F7DDD /* Closet CompanionTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Closet CompanionTests";
-			sourceTree = "<group>";
-		};
-		963A8E352D654930008F7DDD /* Closet CompanionUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Closet CompanionUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -76,8 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				963A8E1A2D65492B008F7DDD /* Closet Companion */,
-				963A8E2B2D65492F008F7DDD /* Closet CompanionTests */,
-				963A8E352D654930008F7DDD /* Closet CompanionUITests */,
 				963A8E192D65492B008F7DDD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -130,9 +131,6 @@
 			dependencies = (
 				963A8E2A2D65492F008F7DDD /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				963A8E2B2D65492F008F7DDD /* Closet CompanionTests */,
-			);
 			name = "Closet CompanionTests";
 			packageProductDependencies = (
 			);
@@ -152,9 +150,6 @@
 			);
 			dependencies = (
 				963A8E342D654930008F7DDD /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				963A8E352D654930008F7DDD /* Closet CompanionUITests */,
 			);
 			name = "Closet CompanionUITests";
 			packageProductDependencies = (
