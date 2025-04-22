@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+        // 0=Home, 1=Wardrobe, 2=Favorites, 3=Settings
+        @Binding var selectedTab: Int
+        // Pass the category name to filter in WardrobeView
+        @Binding var selectedCategory: String?
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
@@ -24,10 +30,34 @@ struct HomeView: View {
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 15) {
+                            Button {
+                            selectedCategory = "Shirts"
+                            selectedTab = 1
+                                }
+                            label: {
                             WardrobeItemView(imageType: .system(name: "tshirt.fill"), label: "Shirts")
+                            }
+                            Button {
+                            selectedCategory = "Pants"
+                            selectedTab = 1
+                                }
+                            label: {
                             WardrobeItemView(imageType: .asset(name: "pants_icon"), label: "Pants")
+                            }
+                            Button {
+                            selectedCategory = "Sneakers"
+                            selectedTab = 1
+                                }
+                            label: {
                             WardrobeItemView(imageType: .system(name: "shoe.fill"), label: "Sneakers")
+                            }
+                            Button {
+                            selectedCategory = nil
+                            selectedTab = 1
+                                }
+                            label: {
                             WardrobeItemView(imageType: .system(name: "plus"), label: "More")
+                            }
                         }
                         .padding(.horizontal)
                     }
@@ -35,27 +65,9 @@ struct HomeView: View {
                 .padding(.horizontal)
 
                 Spacer()
-
-                HStack {
-                    NavBarItem(icon: "house.fill", label: "Home", isSelected: true)
-                    NavBarItem(icon: "hanger", label: "Wardrobe", isSelected: false)
-                    NavBarItem(icon: "star.fill", label: "Favorites", isSelected: false)
-                    NavBarItem(icon: "gearshape.fill", label: "Settings", isSelected: false)
-                }
-                .padding()
-                .background(Color.black.opacity(0.2))
-                .clipShape(RoundedRectangle(cornerRadius: 20))
-                .padding(.horizontal)
             }
             .padding(.top, 20)
             .background(Color(red: 0.1, green: 0.1, blue: 0.1).edgesIgnoringSafeArea(.all))
         }
-    }
-}
-
-// Preview
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
     }
 }
