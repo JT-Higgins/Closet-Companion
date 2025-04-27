@@ -65,4 +65,3 @@ fastlane/test_output
 backend/.venv/
 backend/__pycache__/
 backend/.env
-.DS_Store
